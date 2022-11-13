@@ -11,7 +11,7 @@
       stdenv.mkDerivation {
         name = "hello2";
         src = self;
-        buildPhase = "cd subdir;ls;gcc -o hello2 subdir/hello2.c";
+        buildPhase = "cd subdir;ls;gcc -o hello2 hello2.c";
         installPhase = "mkdir -p $out/bin; install -t $out/bin hello2";
       };
 
